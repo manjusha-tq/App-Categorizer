@@ -1,0 +1,29 @@
+{
+  "name": "Task Categorizer",
+  "slug": "task-categorizer",
+  "description": "Automatically categorize new tasks into Bug, Feature Request, High Priority, or Maintenance based on item names.",
+  "platformVersion": "2023-10",
+  "features": [
+    {
+      "type": "integration",
+      "name": "Categorize new tasks",
+      "description": "When a new item is created, categorize it automatically into the selected column.",
+      "trigger": {
+        "type": "webhook",
+        "title": "When an item is created"
+      },
+      "action": {
+        "type": "webhook",
+        "url": "https://<YOUR_DEPLOYED_URL>/webhook",
+        "title": "Categorize task",
+        "inputFields": [
+          {
+            "id": "columnId",
+            "type": "column",
+            "title": "Which column should hold the task category?"
+          }
+        ]
+      }
+    }
+  ]
+}
