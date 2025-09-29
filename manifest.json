@@ -14,7 +14,7 @@
       },
       "action": {
         "type": "webhook",
-        "url": "https://<YOUR_DEPLOYED_URL>/webhook",
+        "url": "https://app-categorizer.onrender.com/webhook",
         "title": "Categorize task",
         "inputFields": [
           {
